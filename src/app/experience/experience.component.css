@@ -7,9 +7,10 @@
 }
 
 .experience-item {
-    border-left: 2px solid #FFD700;
+    border-left: 2px solid #FACC15;
     padding-left: 20px;
-    margin-top: 10px;
+    margin-left: 12px;
+    margin-top: -15px;
     position: relative;
 }
 
@@ -18,9 +19,9 @@
 }
 
 .title {
-    font-size: 18px; /* Aumenta el tamaño para destacar */
+    
     font-weight: bold;
-    color: #FFD700;
+    color: #FACC15;
 
 }
 
@@ -29,6 +30,7 @@
 }
 
 .title, .company {
+    font-size: 20px; /* Aumenta el tamaño para destacar */
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
@@ -36,7 +38,7 @@
 
 .date {
     display: block;
-    font-size: 15px; /* Reduce el tamaño de la fecha */
+    font-size: 14px; /* Reduce el tamaño de la fecha */
     font-style: italic;
 }
 
