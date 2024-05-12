@@ -1,19 +1,20 @@
-<!-- Mostrar las etiquetas únicas -->
-<div *ngFor="let tag of articlesService.getUniqueTags()">
-    <input type="checkbox" id="{{ tag }}" name="{{ tag }}" (change)="onTagChange(tag, $event)">
-    <label for="{{ tag }}">{{ tag }}</label>
+<div id="articles">
+    <!-- Mostrar las etiquetas únicas -->
+    <div *ngFor="let tag of articlesService.getUniqueTags()">
+      <input type="checkbox" id="{{ tag }}" name="{{ tag }}" (change)="onTagChange(tag, $event)">
+      <label for="{{ tag }}">{{ tag }}</label>
+    </div>
+    
+    <!-- Mostrar los artículos filtrados y paginados -->
+    <div *ngFor="let article of getFilteredArticles() | paginate: { itemsPerPage: 5, currentPage: p }">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+        <p>{{ article.readingTime }} min</p>
+        <ul>
+            <li *ngFor="let category of article.categories">{{ category }}</li>
+        </ul>
+    </div>
+    
+    <!-- Controles de paginación -->
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </div>
-  
-  <!-- Mostrar los artículos filtrados y paginados -->
-  <div *ngFor="let article of getFilteredArticles() | paginate: { itemsPerPage: 5, currentPage: p }">
-      <h2>{{ article.title }}</h2>
-      <p>{{ article.description }}</p>
-      <p>{{ article.readingTime }} minutos de lectura</p>
-      <ul>
-          <li *ngFor="let category of article.categories">{{ category }}</li>
-      </ul>
-      <!-- Más detalles del artículo... -->
-  </div>
-  
-  <!-- Controles de paginación -->
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>

@@ -1,0 +1,115 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.profile-section img {
+    border-radius: 50%;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.profile-section {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.experience-section {
+    width: 100%;
+    text-align: left;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 200px; /* Ajusta según el diseño deseado */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.text-container {
+    text-align: left; /* Alineación a la izquierda para el texto */
+    width: 100%; /* Ocupa todo el ancho del contenedor padre */
+}
+
+h1, h3, p {
+    margin: 10px 0; /* Espaciado vertical */
+}
+
+@media (min-width: 768px) { /* Adjust based on your responsive design breakpoints */
+    .about-container {
+        flex-direction: row; /* Horizontal alignment for larger screens */
+        justify-content: space-between; /* Space between text and image */
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .text-container, .experience-section {
+        flex: 1; /* Takes as much width as possible */
+        text-align: left;
+        padding-right: 20px; /* Adds spacing between text and image */
+    }
+    .profile-picture {
+        flex: 0 0 200px; /* Do not grow, do not shrink, initial width 200px */
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%; /* Circular image */
+    }
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-right: 180px;
+}
+
+.contact-button, .linkedin-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8em;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button {
+    background-color: #444;
+}
+
+.linkedin-button {
+    background-color: #0e76a8; /* LinkedIn color */
+}
+
+.contact-button svg, .linkedin-button svg {
+    stroke: #fff;
+    width: 18px; /* Smaller SVG */
+    height: 18px; /* Smaller SVG */
+}
+
+.contact-button:hover {
+    background-color: #666;
+}
+
+.linkedin-button:hover {
+    background-color: #0b5174; /* Darker LinkedIn color */
+}
+

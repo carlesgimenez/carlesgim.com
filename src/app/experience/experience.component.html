@@ -1,0 +1,10 @@
+<div class="experience-container">
+    <div class="experience-item">
+        <span class="title">{{ title }}</span>
+        <span class="company">{{ company }}</span>
+        <span class="date">{{ date }}</span>
+        <div class="description">
+            <p *ngFor="let paragraph of description">{{ paragraph }}</p>
+        </div>
+    </div>
+</div>

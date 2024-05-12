@@ -1,0 +1,47 @@
+.experience-container {
+    max-width: 900px; /* Limita el ancho máximo del contenedor */
+    margin: auto; /* Centra el contenedor en la página */
+    width: 100%;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.experience-item {
+    border-left: 2px solid #FFD700;
+    padding-left: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.experience-item .date {
+    margin-bottom: 25px;
+}
+
+.title {
+    font-size: 18px; /* Aumenta el tamaño para destacar */
+    font-weight: bold;
+    color: #FFD700;
+
+}
+
+.description {
+    margin-top: 15px;
+}
+
+.title, .company {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.date {
+    display: block;
+    font-size: 15px; /* Reduce el tamaño de la fecha */
+    font-style: italic;
+}
+
+.description p {
+    margin-bottom: -3px; /* Reduce the distance between paragraphs */
+    font-size: 15px;
+    color: rgb(148, 147, 235); /* a futuro cambiar el color del texto a otro */
+}

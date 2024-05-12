@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from '../articles.service';
 import { Article } from '../article';
-import { Inject } from '@angular/core';
 
 @Component({
   selector: 'app-articles',
@@ -9,12 +8,14 @@ import { Inject } from '@angular/core';
   styleUrls: ['./articles.component.css']
 })
 export class ArticlesComponent implements OnInit {
-  articles: Article[] = []; // Initialize the 'articles' property
+  articles: Article[] = [];
   selectedTags: string[] = [];
-  constructor(@Inject(ArticlesService) private articlesService: ArticlesService) { }
+  p: number = 1; // Add this line
+
+  constructor(public articlesService: ArticlesService) { } // Change 'private' to 'public'
 
   ngOnInit(): void {
-    // Add your initialization logic here
+    this.articles = this.articlesService.getArticles(); // Initialize 'articles' with the articles from the service
   }
 
   getFilteredArticles(): Article[] {

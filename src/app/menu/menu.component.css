@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* This adds space above and below the menu */
+    align-items: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  li {
+    margin: 0 10px; /* This adds space between the menu items */
+  }
