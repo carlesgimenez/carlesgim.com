@@ -42,6 +42,21 @@ h1, h3, p {
     margin: 10px 0; /* Espaciado vertical */
 }
 
+h1 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 1rem;
+    color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px) { /* Adjust based on your responsive design breakpoints */
     .about-container {
         flex-direction: row; /* Horizontal alignment for larger screens */
