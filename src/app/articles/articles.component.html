@@ -1,21 +1,24 @@
 <div class="articles-container">
   <h4>Filtra los artículos según la categoría</h4>
   <!-- Mostrar las etiquetas únicas -->
-  <div *ngFor="let tag of articlesService.getUniqueTags()" class="tag">
-    <input type="checkbox" id="{{ tag }}" name="{{ tag }}" (change)="onTagChange(tag, $event)">
-    <label for="{{ tag }}" [class.selected]="selectedTags.includes(tag)">{{ tag }}</label>
+  <div class="tags-container">
+    <div *ngFor="let tag of articlesService.getUniqueTags()" class="tag">
+      <input type="checkbox" id="{{ tag }}" name="{{ tag }}" (change)="onTagChange(tag, $event)">
+      <label for="{{ tag }}" [class.selected]="selectedTags.includes(tag)">{{ tag }}</label>
+    </div>
   </div>
   
   <!-- Mostrar los artículos filtrados y paginados -->
   <div class="articles-grid">
     <div *ngFor="let article of getFilteredArticles() | paginate: { itemsPerPage: 6, currentPage: p }" class="article-card">
         <h2>{{ article.title }}</h2>
-        <p>{{ article.description }}</p>
-        <p>{{ article.readingTime }} min</p>
+        <!--<p>{{ article.description }}</p>-->
+        <p>{{ article.readingTime }} min de lectura</p>
+        <p class="date">{{ article.date | date:'dd/MM/yyyy' }}</p>
         <ul>
             <li *ngFor="let category of article.categories" class="category">{{ category }}</li>
         </ul>
-        <p class="date">{{ article.date | date:'dd/MM/yyyy' }}</p>
+        
     </div>
   </div>
   
